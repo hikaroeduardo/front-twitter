@@ -1,12 +1,15 @@
 import { ReactNode } from "react";
 
+import { SearchInput } from "@/components/ui/search-input";
+import { TrendingArea } from "@/components/ui/trending-area";
+import { RecommendationArea } from "@/components/ui/recommendation-area";
 import { Logo } from "@/components/ui/logo";
 import { NavItem } from "@/components/nav/nav-item";
+import { NavLogout } from "@/components/nav/nav-logout";
+import { NavMyProfile } from "@/components/nav/nav-myprofile";
 
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { NavLogout } from "@/components/nav/nav-logout";
-import { NavMyProfile } from "@/components/nav/nav-myprofile";
 
 type Props = {
     children: ReactNode;
@@ -38,7 +41,9 @@ export default function Layout({ children }: Props) {
             <section className="flex-1 max-w-lg">{children}</section>
 
             <aside className="hidden lg:flex flex-col gap-6 sticky top-0 h-fit w-96 px-8 py-6 border-l-2 border-gray-900">
-                Direita
+                <SearchInput hideOnSearch />
+                <TrendingArea />
+                <RecommendationArea />
             </aside>
         </main>
     );

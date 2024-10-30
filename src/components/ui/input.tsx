@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { KeyboardEvent, useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -15,6 +15,7 @@ type Props = {
     icon?: IconDefinition;
     value?: string;
     onChange?: (newValue: string) => void;
+    onEnter?: () => void;
 };
 
 export const Input = ({
@@ -23,9 +24,16 @@ export const Input = ({
     password,
     icon,
     onChange,
+    onEnter,
     filled,
 }: Props) => {
     const [showPassword, setShowPassword] = useState(false);
+
+    const handleKeyUp = (e: KeyboardEvent<HTMLInputElement>) => {
+        if (e.code.toLowerCase() === "enter" && onEnter) {
+            onEnter();
+        }
+    };
 
     return (
         <div
@@ -44,6 +52,7 @@ export const Input = ({
                 placeholder={placeholder}
                 value={value}
                 onChange={(e) => onChange && onChange(e.target.value)}
+                onKeyUp={handleKeyUp}
                 type={password && !showPassword ? "password" : "text"}
             />
             {password && (
