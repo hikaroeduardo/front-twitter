@@ -1,0 +1,15 @@
+import { user } from "./user";
+import { Tweet } from "@/types/tweet";
+
+export const tweet: Tweet = {
+    id: 123,
+    user: user,
+    body: "Outro dia mágico",
+    image: "https://images.wondershare.com/repairit/aticle/2021/08/twitter-header-photo-issues-1.jpg",
+    likeCount: 523,
+    commentCount: 61,
+    retweetCount: 0,
+    liked: true,
+    retweet: false,
+    dataPost: new Date(2024, 8, 1, 10, 0, 0),
+};
