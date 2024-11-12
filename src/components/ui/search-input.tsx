@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 
 import { Input } from "./input";
+
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 type Props = {

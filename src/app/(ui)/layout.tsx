@@ -1,15 +1,15 @@
 import { ReactNode } from "react";
 
-import { SearchInput } from "@/components/ui/search-input";
-import { TrendingArea } from "@/components/ui/trending-area";
-import { RecommendationArea } from "@/components/ui/recommendation-area";
 import { Logo } from "@/components/ui/logo";
 import { NavItem } from "@/components/nav/nav-item";
 import { NavLogout } from "@/components/nav/nav-logout";
+import { SearchInput } from "@/components/ui/search-input";
+import { TrendingArea } from "@/components/ui/trending-area";
 import { NavMyProfile } from "@/components/nav/nav-myprofile";
+import { RecommendationArea } from "@/components/ui/recommendation-area";
 
-import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
 
 type Props = {
     children: ReactNode;
