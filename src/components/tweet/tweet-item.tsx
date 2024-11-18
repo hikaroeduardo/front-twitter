@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 import { Tweet } from "@/types/tweet";
+import { formatRelativeTime } from "@/utils/format-relative";
 
 import { faComment, faHeart } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -43,7 +44,8 @@ export const TweetItem = ({ tweet }: Props) => {
                     </div>
 
                     <div className="text-xs text-gray-500">
-                        @{tweet.user.slug}
+                        @{tweet.user.slug} -{" "}
+                        {formatRelativeTime(tweet.dataPost)}
                     </div>
                 </div>
 
