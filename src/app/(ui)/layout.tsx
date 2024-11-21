@@ -28,7 +28,7 @@ export default function Layout({ children }: Props) {
                             icon={faHouse}
                             label="Página inicil"
                         />
-                        <NavItem href="/me" icon={faUser} label="Meu perfil" />
+                        <NavItem href="/profile" icon={faUser} label="Meu perfil" />
                     </nav>
                 </div>
 
