@@ -7,6 +7,7 @@ import { GeneralHeader } from "@/components/ui/general-header";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { ProfileFeed } from "@/components/profile/profile-feed";
 
 export default function Page() {
     const isMe = true;
@@ -72,6 +73,8 @@ export default function Page() {
                     </div>
                 </div>
             </section>
+
+            <ProfileFeed />
         </div>
     );
 }
